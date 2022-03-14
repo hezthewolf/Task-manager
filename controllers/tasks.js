@@ -8,8 +8,13 @@ const getAllTasks = asyncWrapper(async (req, res) => {
 });
 
 const createTask = asyncWrapper(async (req, res) => {
-  const task = await Task.create(req.body);
-  res.status(201).json({ task });
+  const tasks = await Task.find({})
+  if (tasks === req.body) {
+    console.log("Task is present");
+  } else {
+    const task = await Task.create(req.body);
+    res.status(201).json({ task });
+  }
 });
 
 const getTask = asyncWrapper(async (req, res, next) => {
