@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="./normalize.css" />
     <!-- main css -->
     <link rel="stylesheet" href="./main.css" />
-    <title>Task Manager</title>
+    <title>Tasks</title>
   </head>
   <body>
     <form class="task-form">
-      <h4>task manager</h4>
-      <div class="form-control">
+      <h4>Tasks</h4>
+      <!-- <div class="form-control">
         <input
           type="text"
           name="name"
@@ -28,12 +28,14 @@
           placeholder="e.g. wash dishes"
         />
         <button type="submit" class="btn submit-btn">submit</button>
-      </div>
+      </div> -->
       <div class="form-alert"></div>
     </form>
-    <button class="btn">All tasks</button>
-    <button class="btn">Completed tasks</button>
-    <button class="btn">Incomplete tasks</button>
+    <div class="display-btns">
+    <button class="btn all-tasks">All tasks</button>
+    <button class="btn complete">Completed tasks</button>
+    <button class="btn incomplete">Incomplete tasks</button>
+    </div>
     <section class="tasks-container">
       <p class="loading-text">Loading...</p>
       <div class="tasks"></div>

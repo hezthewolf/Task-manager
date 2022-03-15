@@ -152,6 +152,19 @@ a {
   background: var(--primary-700);
   box-shadow: var(--shadow-2);
 }
+
+.display-btns{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.display-btns button{
+  margin: 20px;
+}
+
 button.small {
   padding: 0.25rem 0.5rem;
   font-size: var(--smallText);
